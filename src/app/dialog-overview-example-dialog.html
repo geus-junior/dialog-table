@@ -1,0 +1,89 @@
+<h1 mat-dialog-title>Informação dos softwares</h1>
+
+<div mat-dialog-content>
+  <table mat-table [dataSource]="dataSource">
+    <!-- code Column -->
+    <ng-container matColumnDef="code">
+      <th class="code-cell" *matHeaderCellDef>Código</th>
+      <td class="code-cell" *matCellDef="let element">{{element.code}}</td>
+    </ng-container>
+
+    <!-- software Column -->
+    <ng-container matColumnDef="software">
+      <th class="software-cell" *matHeaderCellDef>Software</th>
+      <td class="software-cell" *matCellDef="let element">
+        {{element.software}}
+      </td>
+    </ng-container>
+
+    <!-- versaoCliente Column -->
+    <ng-container matColumnDef="versaoCliente">
+      <th class="version-cell" *matHeaderCellDef>Versão Cliente</th>
+      <td class="version-cell" *matCellDef="let element">
+        {{element.versaoCliente}}
+      </td>
+    </ng-container>
+
+    <!-- versaoAtual Column -->
+    <ng-container matColumnDef="versaoAtual">
+      <th class="version-cell" *matHeaderCellDef>Versão Atual</th>
+      <td class="version-cell" *matCellDef="let element">
+        {{element.versaoAtual}}
+      </td>
+    </ng-container>
+
+    <!-- ultimaAtualizacao Column -->
+    <ng-container matColumnDef="ultimaAtualizacao">
+      <th class="ultima-atualizacao-cell" *matHeaderCellDef>
+        Última Atualização
+      </th>
+      <td class="ultima-atualizacao-cell" *matCellDef="let element">
+        {{element.ultimaAtualizacao | date: "dd/MM/yyyy HH:mm:ss"}}
+      </td>
+    </ng-container>
+
+    <!-- diretorio Column -->
+    <ng-container matColumnDef="diretorio">
+      <th class="diretorio-cell" *matHeaderCellDef>Diretório</th>
+      <td class="diretorio-cell" *matCellDef="let element">
+        {{element.diretorio}}
+      </td>
+    </ng-container>
+
+    <!-- status Column -->
+    <ng-container matColumnDef="status">
+      <th class="status-cell" *matHeaderCellDef>Status</th>
+      <td class="status-cell" *matCellDef="let element">{{element.status}}</td>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </table>
+</div>
+
+<div mat-dialog-actions class="buttons-dialog">
+  <button
+    class="mat-badge button-return mat-raised-button mat-button-base mat-accent mat-badge-overlap mat-badge-above mat-badge-after mat-badge-medium mat-badge-hidden"
+    fxflex=""
+    mat-raised-button=""
+    style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); flex: 1 1 0%; box-sizing: border-box;"
+    (click)="onNoClick()"
+  >
+    <span class="mat-button-wrapper">
+      <mat-icon
+        class="mat-icon notranslate material-icons mat-icon-no-color"
+        role="img"
+        aria-hidden="true"
+      >
+        arrow_back
+      </mat-icon>
+      Voltar
+    </span>
+    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+    <div class="mat-button-focus-overlay"></div>
+    <span
+      id="mat-badge-content-22"
+      class="mat-badge-content mat-badge-active"
+    ></span>
+  </button>
+</div>

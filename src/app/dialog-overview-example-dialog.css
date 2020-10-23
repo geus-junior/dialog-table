@@ -1,0 +1,70 @@
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.code-cell {
+  text-align: center;
+  overflow: hidden;
+  width: 100px !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.software-cell {
+  text-align: left;
+  overflow: hidden;
+  width: 200px !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.version-cell {
+  text-align: center;
+  overflow: hidden;
+  width: 180px !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ultima-atualizacao-cell {
+  overflow: hidden;
+  width: 200px !important;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.diretorio-cell {
+  overflow: hidden;
+  width: 300px !important;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status-cell {
+  overflow: hidden;
+  width: 150px !important;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.button-return {
+  background-color: ;
+}
+
+.buttons-dialog {
+  justify-content: flex-end;
+}
+
+
+
+/*td, th {
+  overflow: hidden;
+  width: 200px !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+*/
